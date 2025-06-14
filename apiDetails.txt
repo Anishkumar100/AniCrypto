@@ -1,0 +1,9 @@
+X_RAPID_API_KEY=`af264620f9mshb2f2750d67d4ecbp1cadf8jsn945d36140fc2`
+
+have to give this API_KEY inside headers
+
+
+Global Crypto Stats= https://api.coinranking.com/v2/stats
+
+
+Top 10 crypto in 24hrs =https://coinranking1.p.rapidapi.com/coins?limit=10&orderBy=marketCap&referenceCurrencyUuid=yhjMzLPhuIDl
