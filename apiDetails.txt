@@ -1,9 +1,25 @@
-X_RAPID_API_KEY=`af264620f9mshb2f2750d67d4ecbp1cadf8jsn945d36140fc2`
+COIN_GECKO_API=tm-2d9e3710-c5a2-4ec0-897b-69967cdaf868
 
 have to give this API_KEY inside headers
 
 
-Global Crypto Stats= https://api.coinranking.com/v2/stats
+Coin List =https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd
 
 
-Top 10 crypto in 24hrs =https://coinranking1.p.rapidapi.com/coins?limit=10&orderBy=marketCap&referenceCurrencyUuid=yhjMzLPhuIDl
+
+Single Key=https://api.coingecko.com/api/v3/coins/{id}
+
+Historical Charts =https://api.coingecko.com/api/v3/coins/{id}/market_chart?vs_currency=usd&days=30
+
+Trending Coins =https://api.coingecko.com/api/v3/search/trending
+
+
+Global Stats= https://api.coingecko.com/api/v3/global
+
+
+
+For News We are going to use bing news search api Key
+
+X_RAPID_API_KEY=af264620f9mshb2f2750d67d4ecbp1cadf8jsn945d36140fc2
+
+

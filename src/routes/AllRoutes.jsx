@@ -6,8 +6,8 @@ export const AllRoutes = () => {
   return (
     <div className=" mt-18  bg-slate-200  dark:bg-gray-900 dark:text-white ">
         <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/cryptocurrencies" element={<CryptoCurrencies/>}/> 
+            <Route path="/" element={<Home url={`https://api.coingecko.com/api/v3/search/trending`}/>}/>
+            <Route path="/cryptocurrencies" element={<CryptoCurrencies url={`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`}/>}/> 
             <Route path="/cryptodetails/:id" element={<CryptoDetails/>}/>
             <Route path="/news" element={<News/>}/>
             <Route path="/exchanges" element={<Exchanges/>}/>
