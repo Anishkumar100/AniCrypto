@@ -36,9 +36,11 @@ export const CoinCard = ({ coin, id }) => {
         </div>
       </div>
 
+<Link to={`/cryptodetails/${id}`}>
       <button className="mt-6 w-full py-2 px-4 bg-zinc-900 text-white rounded-lg font-medium hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200 transition">
-        <Link to={`/cryptodetails/${id}`}>View Details</Link>
+        View Details
       </button>
+</Link>
     </div>
   )
 }
