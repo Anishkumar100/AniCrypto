@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CoinCard } from '../components/CoinCard'
 import { useFetch } from '../hooks/useFetch'
+import {DynamicTab} from "../hooks/DynamicTab"
 
-export const Home = ({ url }) => {
+export const Home = ({ url,title }) => {
   const globalUrl = `https://api.coingecko.com/api/v3/global`
   const { result, loading } = useFetch(url)
 
   const [globalData, setGlobalData] = useState({})
 
+  DynamicTab(title)
   console.log(result)
   // Fetch Global Crypto Stats
   const globalStatFetch = async () => {

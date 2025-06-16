@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../hooks/useFetch';
 import { IndividualCoinInfo,CryptoChart } from '../components/indexComponents';
+import {DynamicTab} from "../hooks/DynamicTab"
 
 
 export const CryptoDetails = () => {
@@ -9,6 +10,7 @@ export const CryptoDetails = () => {
   const { result, loading, error } = useFetch(`https://api.coingecko.com/api/v3/coins/${id}`);
 
 
+  DynamicTab(id)
 
   return (
     <main>

@@ -1,8 +1,10 @@
 import React, { useState, useMemo } from 'react'
 import { CoinCard } from '../components/CoinCard'
 import { useFetch } from '../hooks/useFetch'
+import { DynamicTab } from '../hooks/DynamicTab'
 
-export const CryptoCurrencies = ({ url }) => {
+export const CryptoCurrencies = ({ url,title }) => {
+  DynamicTab(title)
   const [page, setPage] = useState(1)
   const [search, setSearch] = useState('')
   const coinsPerPage = 10

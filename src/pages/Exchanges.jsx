@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useFetch } from "../hooks/useFetch"; // Adjust this path as needed
+import { DynamicTab } from "../hooks/DynamicTab";
 
-export const Exchanges = ({url}) => {
+export const Exchanges = ({url,title}) => {
   const { result: exchanges, loading, error } = useFetch(url);
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedIndex, setExpandedIndex] = useState(null);
 
+  DynamicTab(title)
   const handleToggle = (index) => {
     setExpandedIndex(index === expandedIndex ? null : index);
   };

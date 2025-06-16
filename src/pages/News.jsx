@@ -1,8 +1,10 @@
 import React, { useState, useMemo } from 'react'
 import { useFetch } from '../hooks/useFetch'
 import { NewsCard } from '../components/indexComponents'
+import { DynamicTab } from '../hooks/DynamicTab'
 
-export const News = ({ url }) => {
+export const News = ({ url,title }) => {
+  DynamicTab(title)
   const [search, setSearch] = useState('')
   const [page, setPage] = useState(1)
   const newsPerPage = 6
