@@ -27,7 +27,7 @@ export const Home = ({ url }) => {
   const [news, setNews] = useState([])
 
   const trendingNewsFetch = (async () => {
-    const response = await fetch(`https://newsdata.io/api/1/latest?apikey=pub_eccc511e9a90461f80078e01d235782e&q=latest%20crypto%20news`)
+    const response = await fetch(`https://newsdata.io/api/1/latest?apikey=${import.meta.env.VITE_NEWS_DATA_API_KEY}&q=latest%20crypto%20news`)
     if (response.ok) {
       const finalres = await response.json()
       setNews(finalres)
@@ -104,7 +104,7 @@ export const Home = ({ url }) => {
 
       {/* Top 10 Coins */}
       <div className="flex flex-wrap justify-between items-center p-2 mt-20 mb-5">
-        <h1 className="text-2xl font-bold text-start">Top 10 Cryptocurrencies</h1>
+        <h1 className="text-2xl font-bold text-start">Treding Cryptocurrencies</h1>
         <Link to="/cryptocurrencies">
           <button className="border dark:border-slate-700 border-slate-400 p-2 rounded-lg cursor-pointer dark:bg-indigo-500 bg-indigo-800 text-white">
             Show More

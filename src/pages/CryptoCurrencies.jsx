@@ -27,6 +27,7 @@ export const CryptoCurrencies = ({ url }) => {
   const totalPages = Math.ceil(filteredCoins.length / coinsPerPage)
 
   return (
+    <main>
     <div className="min-h-screen bg-gray-100 dark:bg-zinc-900 py-10 px-4">
       <h1 className="text-3xl font-bold mb-8 text-center text-zinc-900 dark:text-white">
         All Cryptocurrencies
@@ -78,5 +79,6 @@ export const CryptoCurrencies = ({ url }) => {
         </div>
       )}
     </div>
+    </main>
   )
 }
